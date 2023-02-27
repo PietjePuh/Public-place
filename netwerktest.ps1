@@ -1,3 +1,4 @@
+#this file saves on a 
 $timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
 $output_file = "$env:TEMP\info_output.txt"
 
@@ -11,5 +12,5 @@ tracert 8.8.8.8 | Out-File $output_file -Append
 nslookup google.com | Out-File $output_file -Append
 netsh lan show interfaces | Out-File $output_file -Append
 netsh wlan show all | Out-File $output_file -Append
-"=== Done gathering system information ===" | Out-File $output_file -Append
+Write-Host "=== Done gathering system information ==="
 notepad $output_file
