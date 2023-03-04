@@ -92,14 +92,14 @@ echo "============================A========================================="
 Resolve-DnsName $domain -Type a | select 'IPAddress' | FL
 echo "============================NS========================================="
 Resolve-DnsName $domain -Type ns | select NameHost | Ft
-#echo "============================AFSDB========================================="
-#Resolve-DnsName $domain -Type AFSDB | Ft
-#echo "============================CNAME========================================="
-#Resolve-DnsName $domain -Type CNAME | select PrimaryServer,NameAdministrator | Ft
-#echo "============================SOA========================================="
-#Resolve-DnsName $domain -Type soa | Ft
-#echo "============================srv========================================="
-#Resolve-DnsName $domain -Type srv | Ft
+echo "============================AFSDB========================================="
+Resolve-DnsName $domain -Type AFSDB | Ft
+echo "============================CNAME========================================="
+Resolve-DnsName $domain -Type CNAME | select PrimaryServer,NameAdministrator | Ft
+echo "============================SOA========================================="
+Resolve-DnsName $domain -Type soa | Ft
+echo "============================srv========================================="
+Resolve-DnsName $domain -Type srv | Ft
 
 #start
 pause
