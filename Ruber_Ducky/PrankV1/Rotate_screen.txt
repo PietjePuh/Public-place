@@ -1,0 +1,58 @@
+REM Rubber Ducky Payload to rotate screen on Windows 11
+
+DELAY 2000
+REM Open Display Settings
+GUI r
+DELAY 500
+STRING ms-settings:display
+ENTER
+DELAY 2000
+
+REM Navigate to rotation options (13x TAB)
+TAB
+DELAY 200
+TAB
+DELAY 200
+TAB
+DELAY 200
+TAB
+DELAY 200
+TAB
+DELAY 200
+TAB
+DELAY 200
+TAB
+DELAY 200
+TAB
+DELAY 200
+TAB
+DELAY 200
+TAB
+DELAY 200
+TAB
+DELAY 200
+TAB
+DELAY 200
+TAB
+DELAY 500
+
+REM Open the dropdown for rotation
+SPACE
+DELAY 500
+
+REM Select the desired option (two times DOWN for 90 degrees)
+DOWN
+DELAY 200
+DOWN
+ENTER
+DELAY 500
+
+REM Apply changes if necessary
+TAB
+DELAY 500
+TAB
+DELAY 500
+ENTER
+
+REM Close the Settings window
+ALT F4

