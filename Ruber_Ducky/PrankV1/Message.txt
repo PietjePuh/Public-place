@@ -1,5 +1,6 @@
+GUI r
+DELAY 500
 STRING notepad
-ENTER
 DELAY 500
 STRING I'm watching you... you better watch out!
 ENTER
