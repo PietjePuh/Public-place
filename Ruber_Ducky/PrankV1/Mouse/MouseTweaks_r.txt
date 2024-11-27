@@ -1,0 +1,10 @@
+REM Open Command Prompt as Administrator
+DELAY 1000
+GUI r
+DELAY 500
+STRING powershell -NoProfile -WindowStyle Hidden -Command "Start-Process powershell -ArgumentList '-NoProfile -ExecutionPolicy Bypass -Command `"Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass; $code = @\"\$pathMouse = `"HKCU:\\Control Panel\\Mouse`"\`n\$pathCursors = `"HKCU:\\Control Panel\\Cursors`"\`n# Reset mouse settings to defaults`n\$mouseProperties = @{@MouseTrails = `"0`";@SwapMouseButtons = `"0`";@MouseSpeed = `"1`";@DoubleClickSpeed = `"500`";@DoubleClickHeight = `"4`";@DoubleClickWidth = `"4`";@MouseSensitivity = `"10`";@MouseHoverTime = `"400`";@Beep = `"No`"}`n# Apply default settings`n\$mouseProperties.GetEnumerator() | ForEach-Object { Set-ItemProperty -Path \$pathMouse -Name \$_ .Key -Value \$_ .Value}`n# Restore cursor size`n\$cursorSizePath = `"HKCU:\\Control Panel\\Desktop`"\`nSet-ItemProperty -Path \$cursorSizePath -Name `"CursorSize`" -Value `"1`"`nStop-Process -Name `"explorer`" -Force;Start-Process -FilePath explorer.EXE`"" -Verb RunAs""
+ENTER
+
+REM Confirm UAC (if prompted)
+STRING Y
+ENTER
