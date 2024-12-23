@@ -1,7 +1,0 @@
-GUI r
-DELAY 500
-STRING notepad
-DELAY 500
-STRING I'm watching you... you better watch out!
-ENTER
-STRING Muhahaha!

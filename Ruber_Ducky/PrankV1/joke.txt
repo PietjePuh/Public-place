@@ -1,0 +1,141 @@
+DELAY 500
+REM Open Command Prompt
+STRING cmd
+ENTER
+DELAY 500
+
+REM Create the file and write jokes
+STRING echo "Hello its me!" > "dontklik here"
+ENTER
+DELAY 500
+STRING echo "Muhahaha!" >> "dontklik here"
+ENTER
+DELAY 500
+STRING echo "Who Me?" >> "dontklik here"
+ENTER
+DELAY 500
+STRING echo "scare me!" >> "dontklik here"
+ENTER
+DELAY 500
+
+REM Adding jokes
+STRING echo "Why did the scarecrow win an award? Because he was outstanding in his field!" >> "dontklik here"
+ENTER
+DELAY 500
+STRING echo "Why don't skeletons fight each other? They don't have the guts!" >> "dontklik here"
+ENTER
+DELAY 500
+STRING echo "What do you call a vampire that can't stop smiling? A happy camper!" >> "dontklik here"
+ENTER
+DELAY 500
+STRING echo "Why are ghosts bad at lying? Because you can see right through them!" >> "dontklik here"
+ENTER
+DELAY 500
+STRING echo "Why don't mummies take vacations? They are afraid they'll relax and unwind!" >> "dontklik here"
+ENTER
+DELAY 500
+STRING echo "What do you get when you cross a snowman and a vampire? Frostbite!" >> "dontklik here"
+ENTER
+DELAY 500
+STRING echo "Why was the math book sad? It had too many problems!" >> "dontklik here"
+ENTER
+DELAY 500
+STRING echo "Why don't scientists trust atoms? Because they make up everything!" >> "dontklik here"
+ENTER
+DELAY 500
+STRING echo "What do you call fake spaghetti? An impasta!" >> "dontklik here"
+ENTER
+DELAY 500
+STRING echo "Why did the golfer bring extra pants? In case he got a hole in one!" >> "dontklik here"
+ENTER
+DELAY 500
+STRING echo "How do you organize a space party? You planet!" >> "dontklik here"
+ENTER
+DELAY 500
+STRING echo "Why was the computer cold? It left its Windows open!" >> "dontklik here"
+ENTER
+DELAY 500
+STRING echo "Why don't oysters donate to charity? Because they are shellfish!" >> "dontklik here"
+ENTER
+DELAY 500
+STRING echo "How does a penguin build its house? Igloos it together!" >> "dontklik here"
+ENTER
+DELAY 500
+STRING echo "Why did the bike fall over? It was two-tired!" >> "dontklik here"
+ENTER
+DELAY 500
+STRING echo "What did one ocean say to the other ocean? Nothing, they just waved!" >> "dontklik here"
+ENTER
+DELAY 500
+STRING echo "Why are elevator jokes so classic and good? They work on many levels!" >> "dontklik here"
+ENTER
+DELAY 500
+STRING echo "Why was the broom late? It swept in!" >> "dontklik here"
+ENTER
+DELAY 500
+STRING echo "Why did the tomato turn red? It saw the salad dressing!" >> "dontklik here"
+ENTER
+DELAY 500
+STRING echo "Why did the scarecrow become a successful neurosurgeon? He was outstanding in his field!" >> "dontklik here"
+ENTER
+DELAY 500
+STRING echo "Why did the computer go to the doctor? Because it had a virus!" >> "dontklik here"
+ENTER
+DELAY 500
+STRING echo "How does a scientist freshen their breath? With experi-mints!" >> "dontklik here"
+ENTER
+DELAY 500
+STRING echo "Why don't programmers like nature? It has too many bugs!" >> "dontklik here"
+ENTER
+DELAY 500
+STRING echo "Why did the orange stop? It ran out of juice!" >> "dontklik here"
+ENTER
+DELAY 500
+STRING echo "Why was the calendar always on time? It had all its dates in order!" >> "dontklik here"
+ENTER
+DELAY 500
+STRING echo "Why are fish so smart? Because they live in schools!" >> "dontklik here"
+ENTER
+DELAY 500
+STRING echo "Why was the belt arrested? For holding up a pair of pants!" >> "dontklik here"
+ENTER
+DELAY 500
+STRING echo "What's brown and sticky? A stick!" >> "dontklik here"
+ENTER
+DELAY 500
+STRING echo "What do you call a bear with no teeth? A gummy bear!" >> "dontklik here"
+ENTER
+DELAY 500
+STRING echo "Why do cows wear bells? Because their horns don't work!" >> "dontklik here"
+ENTER
+DELAY 500
+STRING echo "What do you call a magic dog? A labracadabrador!" >> "dontklik here"
+ENTER
+DELAY 500
+STRING echo "Why do bananas never get lonely? Because they hang out in bunches!" >> "dontklik here"
+ENTER
+DELAY 500
+STRING echo "What's orange and sounds like a parrot? A carrot!" >> "dontklik here"
+ENTER
+DELAY 500
+STRING echo "Why did the bicycle stand up? Because it was two-tired!" >> "dontklik here"
+ENTER
+DELAY 500
+STRING echo "Why did the scarecrow keep getting promoted? Because he was outstanding in his field!" >> "dontklik here"
+ENTER
+DELAY 500
+STRING echo "What do you get when you cross a snowman with a dog? Frostbite!" >> "dontklik here"
+ENTER
+DELAY 500
+STRING echo "Why was the cat sitting on the computer? It wanted to keep an eye on the mouse!" >> "dontklik here"
+ENTER
+DELAY 500
+STRING echo "What do you call a fake noodle? An impasta!" >> "dontklik here"
+ENTER
+DELAY 500
+
+REM Continue this loop of jokes...
+
+REM Open the file in Notepad after 30 minutes
+STRING notepad "dontklik anywhere! ore you are fucked"
+ENTER

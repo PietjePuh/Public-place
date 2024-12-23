@@ -1,4 +1,6 @@
 REM Rubber Ducky Payload to rotate screen on Windows 11
+REM Failure 8/10
+REM Fun 8/10
 
 DELAY 2000
 REM Open Display Settings
